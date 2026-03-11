@@ -1071,8 +1071,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  height: 90%;
   object-fit: cover;
   transition: var(--transition-1);
 }
