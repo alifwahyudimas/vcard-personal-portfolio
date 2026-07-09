@@ -1786,7 +1786,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   body::-webkit-scrollbar-button { height: 60px; }
 
 
-
   /**
    * REUSED STYLE
    */
@@ -1795,7 +1794,85 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   article { min-height: 100%; }
 
+/* STYLING TOMBOL TOGGLE */
+.theme-toggle-btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: var(--eerie-black-2);
+  color: var(--orange-yellow-crayola);
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  box-shadow: var(--shadow-1);
+  border: 1px solid var(--jet);
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.25s ease;
+}
 
+.theme-toggle-btn:hover {
+  transform: scale(1.05);
+  background: var(--onyx);
+}
+
+/* RESPONSIVE UNTUK LAYAR HP / MOBILE */
+@media (max-width: 1023px) {
+  .theme-toggle-btn {
+    top: 20px;
+    left: auto;
+    right: 20px; /* Pindah ke kanan atas pada layar HP agar tidak tabrakan */
+  }
+}
+
+/* VARIABEL WARNA UNTUK LIGHT MODE */
+body.light-mode {
+  background: #f0f2f5;
+  color: #1e1e1f;
+}
+
+body.light-mode .sidebar,
+body.light-mode .navbar,
+body.light-mode article,
+body.light-mode .theme-toggle-btn {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+body.light-mode .sidebar-info_more,
+body.light-mode .separator {
+  border-color: #e0e0e0;
+}
+
+body.light-mode .form-input,
+body.light-mode .mapbox {
+  background: #f9f9f9;
+  border: 1px solid #dcdcdc;
+  color: #1e1e1f;
+}
+
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode h4,
+body.light-mode strong {
+  color: #2b2b2c;
+}
+
+body.light-mode .navbar-link,
+body.light-mode .contact-item {
+  color: #555555;
+}
+
+body.light-mode .navbar-link:hover,
+body.light-mode .navbar-link.active {
+  color: var(--orange-yellow-crayola);
+}
 
   /**
    * MAIN
