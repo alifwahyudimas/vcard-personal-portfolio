@@ -1110,6 +1110,24 @@
 
   <!-- Tambahan JavaScript untuk Animasi Mengetik Multi-disiplin -->
   <script>
+    // Memastikan halaman Contact bisa tampil saat diklik
+  document.querySelectorAll('[data-nav-link]').forEach(button => {
+  button.addEventListener('click', function () {
+    const targetPage = this.innerHTML.trim().toLowerCase();
+    
+    if (targetPage === 'contact') {
+      // Hapus class active dari semua artikel lain
+      document.querySelectorAll('article').forEach(page => page.classList.remove('active'));
+      // Tambahkan class active ke artikel contact
+      const contactPage = document.querySelector('.contact');
+      if (contactPage) contactPage.classList.add('active');
+      
+      // Update status tombol navigasi agar menyala orange
+      document.querySelectorAll('[data-nav-link]').forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+    }
+  });
+});
     const roles = [
       "IT Support Engineer Graduate", 
       "Data Administrative Professional", 
