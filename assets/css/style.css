@@ -1870,7 +1870,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
-
+.tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Memastikan posisi berada di belakang semua komponen web */
+  pointer-events: none;
+}
 
   /**
 	 * RESUME
