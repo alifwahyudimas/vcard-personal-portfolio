@@ -1060,6 +1060,26 @@
 
   </main>
 
+<!--
+    - custom
+  -->
+      <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <!-- 1. Ganti action dengan API Web3Forms, tambahkan method="POST" -->
+          <form action="https://api.web3forms.com/submit" method="POST" class="form" data-form>
+            <!-- 2. Tambahkan baris ini tepat di bawah tag <form> dan masukkan Access Key kamu -->
+            <input type="hidden" name="access_key" value="5b95b5fd-0114-4673-8066-3278f312a4bd">
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
   <!--
     - custom js link
   -->
