@@ -40,7 +40,7 @@
 </head>
 
 <body>
-
+ <div id="tsparticles"></div>
   <!--
     - #MAIN
   -->
@@ -983,6 +983,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-stars@2/tsparticles.preset.stars.bundle.min.js"></script>
 
   <!-- Tambahan JavaScript untuk Animasi Mengetik Multi-disiplin -->
   <script>
@@ -1085,6 +1086,26 @@ if (contactForm) {
   confirmButtonColor: '#ffdb70' // Menyesuaikan warna orange khas templatemu
 });
   </script>
+  <script>
+    // INISIALISASI ANIMASI PARTIKEL BACKGROUND
+if (typeof tsParticles !== "undefined") {
+  tsParticles.load("tsparticles", {
+    preset: "stars",
+    particles: {
+      color: { value: "#ffdb70" }, // Mengubah warna bintang menjadi orange khas templatemu
+      lineLinked: { enable: false },
+      move: {
+        enable: true,
+        speed: 0.5 // Kecepatan gerak lambat agar tetap terlihat elegan
+      },
+      size: { value: 1.5 }
+    },
+    background: {
+      color: "#121212" // Menjaga warna dasar background tetap hitam elegan
+    }
+  });
+}
+</script>
   <script>
     // Memastikan halaman Contact bisa tampil saat diklik
   document.querySelectorAll('[data-nav-link]').forEach(button => {
