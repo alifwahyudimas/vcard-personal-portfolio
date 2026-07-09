@@ -1061,14 +1061,27 @@
   </main>
 
 <!--
-    - custom
-  -->
-      <section class="contact-form">
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <!-- Google Maps Embed yang diarahkan ke area Jakarta Timur / Cawang -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1973491417084!2d106.8580665!3d-6.2376999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f36b69165b4b%3A0xad05b1d03426e997!2sCawang%2C%20Kec.%20Kramat%20jati%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+              width="400" height="300" loading="lazy" title="Google Maps - Jakarta Timur"></iframe>
+          </figure>
+        </section>
+        <section class="contact-form">
+
           <h3 class="h3 form-title">Contact Form</h3>
-          <!-- 1. Ganti action dengan API Web3Forms, tambahkan method="POST" -->
-          <form action="https://api.web3forms.com/submit" method="POST" class="form" data-form>
-            <!-- 2. Tambahkan baris ini tepat di bawah tag <form> dan masukkan Access Key kamu -->
-            <input type="hidden" name="access_key" value="5b95b5fd-0114-4673-8066-3278f312a4bd">
+
+          <form action="#" class="form" data-form>
+
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
               <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
@@ -1078,8 +1091,12 @@
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
+
           </form>
+
         </section>
+
+      </article>
   <!--
     - custom js link
   -->
