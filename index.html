@@ -1110,6 +1110,43 @@
 
   <!-- Tambahan JavaScript untuk Animasi Mengetik Multi-disiplin -->
   <script>
+    // FORCE NAVIGATION UNTUK MENU CONTACT
+document.querySelectorAll('[data-nav-link]').forEach(button => {
+  button.addEventListener('click', function () {
+    // Ambil teks dari tombol menu (misal: "Contact")
+    const menuText = this.textContent.trim().toLowerCase();
+    
+    if (menuText === 'contact') {
+      // 1. Sembunyikan semua halaman artikel lain
+      document.querySelectorAll('article').forEach(article => {
+        article.classList.remove('active');
+        article.style.display = 'none'; // Memastikan benar-benar hilang
+      });
+      
+      // 2. Tampilkan artikel contact secara paksa
+      const contactArticle = document.querySelector('.contact');
+      if (contactArticle) {
+        contactArticle.classList.add('active');
+        contactArticle.style.display = 'block'; // Memperbaiki blank hitam
+      }
+      
+      // 3. Ubah warna tombol menu yang aktif menjadi orange
+      document.querySelectorAll('[data-nav-link]').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      this.classList.add('active');
+    } else {
+      // Kembalikan display default ke block jika menu lain yang diklik
+      document.querySelectorAll('article').forEach(article => {
+        if (article.classList.contains('active')) {
+          article.style.display = 'block';
+        }
+      });
+    }
+  });
+});
+  </script>
+  <script>
     // Memastikan halaman Contact bisa tampil saat diklik
   document.querySelectorAll('[data-nav-link]').forEach(button => {
   button.addEventListener('click', function () {
