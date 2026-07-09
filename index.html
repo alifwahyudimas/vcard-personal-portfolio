@@ -680,7 +680,7 @@
         <section class="projects">
           <ul class="filter-list">
 
-            <li class="filter-item" data-tilt data-tilt-max="10">
+            <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
             </li>
             <li class="filter-item">
@@ -704,7 +704,7 @@
               <li class="select-item">
                 <button data-select-item>All</button>
               </li>
-              <li class="select-item" data-tilt data-tilt-max="10">
+              <li class="select-item">
                 <button data-select-item>Web design</button>
               </li>
               <li class="select-item">
@@ -741,7 +741,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design" data-tilt data-tilt-max="10">
+            <li class="project-item  active" data-filter-item data-category="web design" >
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -790,7 +790,7 @@
                 <p class="project-category">Web design</p>
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="web development" data-tilt data-tilt-max="10">
+            <li class="project-item  active" data-filter-item data-category="web development">
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -802,7 +802,7 @@
                 <p class="project-category">Web development</p>
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="applications" data-tilt data-tilt-max="10">
+            <li class="project-item  active" data-filter-item data-category="applications">
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -814,7 +814,7 @@
                 <p class="project-category">Applications</p>
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="web development" data-tilt data-tilt-max="10">
+            <li class="project-item  active" data-filter-item data-category="web development">
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -840,7 +840,7 @@
        </header>
         <section class="blog-posts">
           <ul class="blog-posts-list">
-            <li class="blog-post-item" data-tilt data-tilt-max="10" >
+            <li class="blog-post-item" >
               <a href="#">
                 <figure class="blog-banner-box">
                   <img src="./assets/images/Sertifikat_Self Effacy.jpg" alt="Essential Skills:Self Efficacy" loading="lazy">
@@ -859,7 +859,7 @@
                 </div>
               </a>
             </li>
-            <li class="blog-post-item" data-tilt data-tilt-max="10" >
+            <li class="blog-post-item" >
               <a href="#">
                 <figure class="blog-banner-box">
                   <img src="./assets/images/Sertifikat_Design_Thinking.jpg" alt="Essential Skills:Design Thinking" loading="lazy">
@@ -878,7 +878,7 @@
                 </div>
               </a>
             </li>
-            <li class="blog-post-item" data-tilt data-tilt-max="10" >
+            <li class="blog-post-item" >
               <a href="#">
                 <figure class="blog-banner-box">
                   <img src="./assets/images/Sertifikat_Disruption.jpg" alt="Essential Skills:Digital Disruption & Transformation" loading="lazy">
@@ -899,7 +899,7 @@
 
               </a>
             </li>
-            <li class="blog-post-item" data-tilt data-tilt-max="10">
+            <li class="blog-post-item">
               <a href="#">
                 <figure class="blog-banner-box">
                   <img src="./assets/images/Sertifikat_Emotional_Intel.jpg" alt="Skills : Emotional Intelligence" loading="lazy">
@@ -975,7 +975,7 @@
     // FORCE NAVIGATION UNTUK MENU CONTACT
 document.querySelectorAll('[data-nav-link]').forEach(button => {
   button.addEventListener('click', function () {
-    // Ambil teks dari tombol menu (misal: "Contact")
+    // Ambil teks dari tombol menu (misal: "Contact"
     const menuText = this.textContent.trim().toLowerCase();
     
     if (menuText === 'contact') {
