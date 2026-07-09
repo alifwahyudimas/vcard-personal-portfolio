@@ -40,7 +40,6 @@
 </head>
 
 <body>
- <div id="tsparticles"></div>
   <!--
     - #MAIN
   -->
@@ -173,16 +172,14 @@
     <!--
       - #main-content
     -->
-
-    <div class="main-content">
-     <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
-        <ion-icon name="moon-outline" id="theme-icon"></ion-icon>
-      </button>
-
       <nav class="navbar">
       <!--
         - #NAVBAR
       -->
+      <div class="main-content">
+     <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+        <ion-icon name="moon-outline" id="theme-icon"></ion-icon>
+      </button>
 
      <nav class="navbar">
 
@@ -1106,31 +1103,6 @@ if (typeof tsParticles !== "undefined") {
     },
     background: {
       color: "#121212" // Menjaga warna dasar background tetap hitam elegan
-    }
-  });
-}
-    // LOGIKA DARK / LIGHT MODE TOGGLE
-const themeToggleBtn = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-const currentTheme = localStorage.getItem('theme');
-
-// Cek apakah user sebelumnya sudah memilih light-mode
-if (currentTheme === 'light') {
-  document.body.classList.add('light-mode');
-  if (themeIcon) themeIcon.setAttribute('name', 'sun-outline');
-}
-
-if (themeToggleBtn) {
-  themeToggleBtn.addEventListener('click', function () {
-    document.body.classList.toggle('light-mode');
-    
-    // Cek status kelas saat ini dan ganti ikon serta simpan ke localStorage
-    if (document.body.classList.contains('light-mode')) {
-      themeIcon.setAttribute('name', 'sun-outline');
-      localStorage.setItem('theme', 'light');
-    } else {
-      themeIcon.setAttribute('name', 'moon-outline');
-      localStorage.setItem('theme', 'dark');
     }
   });
 }
