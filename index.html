@@ -1142,6 +1142,69 @@ document.querySelectorAll('[data-nav-link]').forEach(button => {
 });
   </script>
   <script>
+    // PROSES PENGIRIMAN FORM DENGAN POP-UP SWEETALERT2
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Mencegah halaman reload otomatis
+
+    // Ubah text tombol saat loading
+    const btnSpan = this.querySelector('.form-btn span');
+    const originalText = btnSpan.textContent;
+    btnSpan.textContent = 'Sending...';
+
+    const formData = new FormData(this);
+    
+    // Masukkan Access Key Web3Forms kamu langsung di dalam script ini
+    formData.append('access_key', '5b95b5fd-0114-4673-8066-3278f312a4bd');
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      btnSpan.textContent = originalText; // Kembalikan text tombol
+      
+      if (data.success) {
+        // Tampilkan pop-up sukses yang estetik sesuai warna tema web
+        Swal.fire({
+          title: 'Success!',
+          text: 'Thank you! Your message has been sent successfully.',
+          icon: 'success',
+          confirmButtonColor: '#ffdb70',
+          background: '#1e1e1f',
+          color: '#ffffff'
+        });
+        contactForm.reset(); // Kosongkan isi form setelah sukses
+      } else {
+        Swal.fire({
+          title: 'Oops...',
+          text: 'Something went wrong. Please try again.',
+          icon: 'error',
+          confirmButtonColor: '#ffdb70',
+          background: '#1e1e1f',
+          color: '#ffffff'
+        });
+      }
+    })
+    .catch(error => {
+      btnSpan.textContent = originalText;
+      console.error('Error:', error);
+    });
+  });
+}
+  </script>
+  <script>
+    Swal.fire({
+  title: 'Success!',
+  text: 'Your message has been sent successfully.',
+  icon: 'success',
+  confirmButtonColor: '#ffdb70' // Menyesuaikan warna orange khas templatemu
+});
+  </script>
+  <script>
     // Memastikan halaman Contact bisa tampil saat diklik
   document.querySelectorAll('[data-nav-link]').forEach(button => {
   button.addEventListener('click', function () {
